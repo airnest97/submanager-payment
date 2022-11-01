@@ -24,17 +24,25 @@ public class CableTransaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String phoneNumber;
+
     private BigDecimal priceOfSubscription;
+
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate dateAdded;
+
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+
     private LocalDate nextPayment;
+
     private String smartCardNumber;
+
     private PaymentType paymentType;
+
     private String createdBy;
 }
