@@ -14,7 +14,7 @@
 	<name>submanager-payment</name>
 	<description>Payment platform for submanager</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -86,6 +86,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>submanager-payment</finalName>
 	</build>
 
 </project>
