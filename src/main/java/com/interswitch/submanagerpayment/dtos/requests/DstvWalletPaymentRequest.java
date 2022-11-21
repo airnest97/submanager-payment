@@ -18,6 +18,7 @@ import java.time.LocalDate;
 @Builder
 public class DstvWalletPaymentRequest {
     private String subscriptionId;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal priceOfSubscription;
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)

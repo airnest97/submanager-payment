@@ -27,21 +27,23 @@ public class CableTransaction {
 
     private String phoneNumber;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal priceOfSubscription;
 
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate dateAdded;
 
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 
     private LocalDate nextPayment;
 
     private String smartCardNumber;
 
+    @Enumerated(value = EnumType.STRING)
     private PaymentType paymentType;
 
     private String createdBy;

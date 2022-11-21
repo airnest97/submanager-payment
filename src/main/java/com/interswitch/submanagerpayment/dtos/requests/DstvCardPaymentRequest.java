@@ -18,6 +18,7 @@ import java.time.LocalDate;
 @Builder
 public class DstvCardPaymentRequest {
     private String subscriptionId;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal priceOfSubscription;
     private String cardNumber;
     private String cVV;

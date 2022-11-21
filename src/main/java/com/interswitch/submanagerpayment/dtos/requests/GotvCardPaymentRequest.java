@@ -17,6 +17,7 @@ import java.time.LocalDate;
 @Builder
 public class GotvCardPaymentRequest {
     private String subscriptionId;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal priceOfSubscription;
     private String cardNumber;
     private String cVV;
